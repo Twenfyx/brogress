@@ -1,11 +1,44 @@
+import { useState } from "react";
+
 export default function Workouts() {
+
+ const [showForm, setShowForm] = useState(false);
+
   return (
     <main className="flex-1 p-6 bg-gray-100">
       <h1 className="text-2xl font-bold mb-6 text-center">Your Workouts</h1>
 
+    {/* style={{ display: showForm ? 'block' : 'none' }*/}
+
+    <form action="post" className ="bg-white p-6 shadow-md mb-4 hover:shadow-lg transition rounded-lg" >
+      <div>
+          <label className="block font-medium" >Date </label>
+          <input type="date" name="" id="" className="w-full" />
+      </div>
+
+      <div>
+        <label className="block font-medium">Type:</label>
+        <select name="type" id="type" className="w-full">
+          <option value="push">Push</option>
+          <option value="pull">Pull</option>
+          <option value="legs">Legs</option>
+        </select>
+      </div>
+
+       <div>
+          <label className="block font-medium" >Duration </label>
+          <input type="text" name="" id="" className="w-full" />
+      </div>
+
+       <div>
+          <label className="block font-medium" >Note</label>
+        <textarea name="note" id="note" className="w-full border" rows={3}></textarea>
+      </div>
+    </form>
+
       {/* Add Workout Button */}
       <div className="flex justify-center mb-6">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+        <button onClick={() => setShowForm(true)} className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
           + Add Workout
         </button>
       </div>
