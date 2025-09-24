@@ -25,7 +25,7 @@ export default function Progress() {
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" />
-          <YAxis />
+          <YAxis /> 
           <Tooltip />
           <Line type="monotone" dataKey="volume" stroke="#2563eb" strokeWidth={2} />
         </LineChart>

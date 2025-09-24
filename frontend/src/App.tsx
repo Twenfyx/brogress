@@ -13,6 +13,7 @@ export default function App() {
       <Sidebar />
 
       {/* Main content changes with routes */}
+      
       <main className="flex-1 p-6 bg-gray-100 overflow-y-auto">
         <Routes>
           <Route path="/" element={<Cards />} />   {/* Dashboard */}
